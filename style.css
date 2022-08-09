@@ -1,0 +1,278 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Calibri;
+  }
+  
+  main {
+    display: flex;
+    /* float: right; */
+  }
+  
+  button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .input-section {
+    background-color: rgb(100, 149, 237);
+    height: 100vh;
+    padding: 4vw;
+    flex-basis: 25%;
+    display: flex;
+    overflow-y: auto;
+  }
+  
+  .input-content {
+    margin: auto;
+    color: aliceblue;
+  }
+  
+  .input-content .title-logo {
+    font-size: 62px;
+    color: gold;
+  }
+  
+  .inputBook {
+    display: block;
+  }
+  
+  .input {
+    margin: 20px 0px;
+  }
+  
+  .input input {
+    border: none;
+    width: 100%;
+    font-size: 24px;
+    padding: 15px 15px;
+    border-radius: 5px;
+    margin: 10px 0px;
+  }
+  
+  .input input:focus {
+    outline: none;
+    background-color: aliceblue;
+  }
+  
+  .inputBook label {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .inputBook button {
+    margin: 20px 0px;
+    padding: 20px 20px;
+    background-color: wheat;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+    font-weight: 700;
+    font-size: 16px;
+    /* letter-spacing: 0.5px; */
+  }
+  
+  .inputBook button:hover {
+    box-shadow: 10px 20px 35px rgba(58, 7, 153, 0.25);
+    transform: translateY(-5px);
+    background-color: gold;
+  }
+  
+  .display-section {
+    padding: 40px;
+    color: cornflowerblue;
+    display: flex;
+    flex-basis: 75%;
+    background-color: aliceblue;
+  }
+  
+  .display-section > section {
+    flex-basis: 50%;
+    /* background-color: antiquewhite; */
+    margin: 2vw;
+    border-radius: 10px;
+    height: 80vh;
+    overflow: hidden;
+  }
+  
+  .nav-display {
+    padding: 5px 20px;
+    margin: 0px 0px;
+  }
+  
+  .nav-display.unread {
+    background-color: cornflowerblue;
+    color: white;
+    box-shadow: 0px 20px 50px rgba(100, 149, 237, 0.1);
+  }
+  
+  .book_list {
+    height: 90%;
+    /* padding: 0px 20px; */
+    overflow-y: auto;
+  }
+  
+  .book_list#incompleteBookshelfList {
+    background-color: white;
+  }
+  
+  .book_item {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    transition: 0.5s;
+    padding: 10px 20px;
+    /* background-color: white;
+      padding: 0px 10px;
+      border-radius: 5px; */
+  }
+  
+  .book_item > div {
+    flex-basis: 50%;
+  }
+  
+  .book_item > p {
+    flex-basis: 20%;
+  }
+  
+  .book_item div.action {
+    display: flex;
+    justify-content: end;
+  }
+  .book_item div.action button {
+    margin: 0px 5px;
+  }
+  
+  #incompleteBookshelfList .book_item:hover {
+    background-color: aliceblue;
+  }
+  
+  #completeBookshelfList .book_item:hover {
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  .book_item .h3 {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  
+  .book_item button {
+    background-color: transparent;
+    border: 1px solid cornflowerblue;
+    color: cornflowerblue;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button.red:hover {
+    background-color: crimson;
+    border-color: crimson;
+    color: white;
+  }
+  button.green:hover {
+    background-color: cadetblue;
+    border-color: cadetblue;
+    color: white;
+  }
+  button.orange:hover {
+    background-color: goldenrod;
+    border-color: goldenrod;
+    color: white;
+  }
+  
+  .search_section {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: 0.5s;
+    width: 60px;
+  }
+  
+  .search_section.hover {
+    background-color: white;
+    width: 300px;
+  }
+  
+  .search_section input {
+    border: none;
+    font-size: 18px;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    margin-right: 10px;
+  }
+  
+  #searchBook {
+    display: flex;
+    float: right;
+  }
+  
+  #searchSubmit {
+    background-color: wheat;
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  
+  #searchSubmit:hover {
+    background-color: gold;
+  }
+  
+  .alert {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 149, 237, 0.1);
+    display: none;
+  }
+  .alert.show {
+    display: flex;
+  }
+  .alert > .box {
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .alert .red {
+    color: crimson;
+    border: 1px solid crimson;
+    background-color: transparent;
+  }
+  .alert .orange {
+    color: goldenrod;
+    border: 1px solid goldenrod;
+    background-color: transparent;
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    main,
+    .display-section,
+    .book_item {
+      flex-direction: column;
+    }
+  
+    .book_item {
+      align-items: flex-start;
+      justify-content: start;
+      padding: 20px 20px;
+    }
+  }
+  

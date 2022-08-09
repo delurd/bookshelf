@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Bookshelf</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <div class="input-section">
+            <div class="input-content">
+                <h1 class="title-logo">Bookshelf</h1>
+                <br>
+                <h2>Masukkan Buku Baru</h2>
+                <form id="inputBook" class="inputBook">
+                    <div class="input">
+                        <label for="inputBookTitle">Judul</label>
+                        <input id="inputBookTitle" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" type="text" required>
+                    </div>
+                    <div class="input">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" type="number" required>
+                    </div>
+                    <div class="input_inline">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                        <input id="inputBookIsComplete" type="checkbox">
+                    </div>
+                    <button type="submit" id="bookSubmit">Masukkan Buku ke Rak</button>
+                </form>
+            </div>
+        </div>
+        <div class="display-section">
+            <section>
+                <div class="nav-display unread">
+                    <h2>Belum Selesai dibaca</h2>
+                </div>
+                <div id="incompleteBookshelfList" class="book_list">
+                  
+                </div>
+            </section>
+            <section>
+                <div class="nav-display">
+                    <h2>Selesai dibaca</h2>
+                </div>
+                <div id="completeBookshelfList" class="book_list">
+                   
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <aside class="search_section">
+        <form id="searchBook">
+            <input id="searchBookTitle" type="text" placeholder="Judul Buku">
+            <div>
+                <button id="searchSubmit" type="submit"><i class="fa fa-search" aria-hidden="true"
+                        alt="Search"></i></button>
+            </div>
+        </form>
+    </aside>
+
+    <div class="alert" id="alertDelete">
+        <div class="box">
+            <h3>Hapus Buku <span id="alertTitleBook"></span> ?</h3>
+            <div>
+                <button class="orange batal">Batal</button>
+                <button class="red hapus">Hapus</button>
+            </div>
+        </div>
+    </div>
+    <div class="alert" id="alertEdit">
+        <div class="box">
+            <div style="text-align: end;">
+                <button id="alertEditClose" class="red">X</button>
+            </div>
+            <form id="editBook" class="inputBook">
+                <div class="input">
+                    <label for="editBookTitle">Judul</label>
+                    <input id="editBookTitle" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="editBookAuthor">Penulis</label>
+                    <input id="editBookAuthor" type="text" required>
+                </div>
+                <div class="input">
+                    <label for="editBookYear">Tahun</label>
+                    <input id="editBookYear" type="number" required>
+                </div>
+                <div class="input_inline">
+                    <label for="editBookIsComplete">Selesai dibaca</label>
+                    <input id="editBookIsComplete" type="checkbox">
+                </div><br>
+                <button id="editBookSubmit" type="submit">Simpan Perubahan</button>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>
